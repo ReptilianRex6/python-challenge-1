@@ -118,17 +118,16 @@ while place_order:
                     }
                     i += 1
             # 2. Ask customer to input menu item number
-
+            menu_selection=input("Type Item number:")
 
             # 3. Check if the customer typed a number
-
+            if menu_selection.isdigit():
                 # Convert the menu selection to an integer
-
-
+                 menu_selection=int(menu_selection)
                 # 4. Check if the menu selection is in the menu items
-
+                if menu_selection in menu_items:
                     # Store the item name as a variable
-
+                    item_number=int(menu_selection)
 
                     # Ask the customer for the quantity of the menu item
 
@@ -143,7 +142,8 @@ while place_order:
 
 
                 # Tell the customer they didn't select a menu option
-
+                else:
+                print(f"{menu_selection} is not an option")
         else:
             # Tell the customer they didn't select a menu option
             print(f"{menu_category} was not a menu option.")
