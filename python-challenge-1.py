@@ -149,7 +149,7 @@ while place_order:
                 
                 # Tell the customer they didn't select a menu option
             else:
-                print(f"{menu_selection} is not an option")
+                print(f"Error: {menu_selection} is not an option")
         else:
             # Tell the customer they didn't select a menu option
             print(f"{menu_category} was not a menu option.")
@@ -215,6 +215,7 @@ for item in order_list:
     # 10. Print the item name, price, and quantity
 
 total_cost = sum(item["Price"] * item["Quantity"] for item in order_list)
+print("----------------------------------------------")
 print(f"Total: ${total_cost:.2f}")
 
 # 11. Calculate the cost of the order using list comprehension
